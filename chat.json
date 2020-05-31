@@ -50,7 +50,7 @@
         "context_set": [""]
         },
         {"tag": "projects",
-        "patterns":["Data Science Projects", "Machine Learning Projects", "Projects Site", "Where can i get projects",],
+        "patterns":["Data Science Projects", "Machine Learning Projects", "Projects Site", "Where can i get projects"],
         "responses": ["Papers with Code", "Two Minute Papers Youtube Channel", "Made with ML", "Github Repository of MOOCS"],
         "context_set": [""]
         },
