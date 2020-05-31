@@ -15,6 +15,7 @@ with open("chat.json") as file:
     bot = json.load(file)
 
 try:
+    x
     with open("data.pickle", "rb") as f:
         words, labels, train, output = pickle.load(f)
 
@@ -80,7 +81,7 @@ except Exception as err:
 
 
 try:
-    model = load_model("model.h5")
+    modelx = load_model("model.h5")
 
 except Exception as err:
 
@@ -152,6 +153,7 @@ def chat():
         results_index = np.argmax(results)
         tag = labels[results_index]
         
+        print(f"Model Prediction:   {results[results_index]}")
         if results[results_index] >= 0.844:
 
             #Looping through the json file
@@ -159,9 +161,9 @@ def chat():
             for tags in bot["intents"]:
                 if tags["tag"] == tag:
                     responses = tags["responses"]
-            print(np.random.choice(responses))
+            print(f"Chat Bot:   {np.random.choice(responses)}")
         
         else:
-            print("I dont quite Understand, Ask another question")
+            print("Chat Bot:   I dont quite Understand, Ask another question")
 
 chat()

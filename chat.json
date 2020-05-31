@@ -20,7 +20,7 @@
         "context_set": [""]
         },
         {"tag": "learning",
-        "patterns":["Am a begineer what to learn","What do you recommend","what should i learn","what is the best for me to learn","Am stucked","What do you recommend"],
+        "patterns":["Am a begineer what can i start with","What do you recommend","what should i learn","what is the best for me to learn","Am stucked"],
         "responses": ["Start with Python or R","Learn Python","Learn R"],
         "context_set": [""]
         },
@@ -30,7 +30,7 @@
         "context_set": [""]
         },
         {"tag": "python",
-        "patterns":["Free Course","Which course can you recommend","Platform for Learning","How much for online course"],
+        "patterns":["Free Course on Python","Which course can you recommend","Platform for Learning","How much for online course"],
         "responses": ["Udacity or Cousera","Udacity Intro to Python","Python For Everybody by University of Michigan Cousera", "Check out Youtube"],
         "context_set": [""]
         },
@@ -40,9 +40,34 @@
         "context_set": [""]
         },
         {"tag": "books",
-        "patterns":["which book do you recommend", "which research paper do you recoommend", "Importance of Books", "Website to get books"],
+        "patterns":["which book do you recommend for data science", "which research paper do you recommend for data science", "Resrach paper for machine learning", "Data Science Books"],
         "responses": ["For Books check Intro to Machine Leaerning by Andeas Mueller", "Check out O'Reily, Springer or Packt Books", "arvix.org for research paper", "Hands on Scikit Learn and Tensorflow"],
         "context_set": [""]
-        }
+        },
+        {"tag": "math",
+        "patterns":["maths for data science", "linear algebra", "maths for machine learning", "Mathematics"],
+        "responses": ["Check Out Khan Academy", "STATQUEST Youtube Channel", "Fast.ai Algebra for Coders", "Mit Linear Algebra"],
+        "context_set": [""]
+        },
+        {"tag": "projects",
+        "patterns":["Data Science Projects", "Machine Learning Projects", "Projects Site", "Where can i get projects",],
+        "responses": ["Papers with Code", "Two Minute Papers Youtube Channel", "Made with ML", "Github Repository of MOOCS"],
+        "context_set": [""]
+        },
+        {"tag": "blogs",
+        "patterns":["data science blogs", "machine learning blogs", "blogs for data scienc", "blogs for beginners", "help site"],
+        "responses": ["Hugging Face(NLP)", "Google AI", "Facebook AI", "Deep Mind", "Open AI", "Analytics Vidya","Pyimage Search (Computer Vision)"],
+        "context_set": [""]
+        },
+        {"tag": "academics",
+        "patterns":["Free source for data science", "Where can i get free courses", "Free Data Science Lectures"],
+        "responses": ["MIT Lectures", "Fast.Ai", "Stanford Lectures", "Edureka Youtube Channel"],
+        "context_set": [""]
+        },
+        {"tag": "podcast",
+        "patterns":["Data Science Podcast", "Artificial Intelligence Podcast", "Podcast", "Podcast for Beginners in Data Science"],
+        "responses": ["AI Podcast by Lex Friedman", "Talking Machines", "Data Skeptic"],
+        "context_set": [""]
+        },
     ]
 }
