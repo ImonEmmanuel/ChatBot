@@ -68,6 +68,6 @@
         "patterns":["Data Science Podcast", "Artificial Intelligence Podcast", "Podcast", "Podcast for Beginners in Data Science"],
         "responses": ["AI Podcast by Lex Friedman", "Talking Machines", "Data Skeptic"],
         "context_set": [""]
-        },
+        }
     ]
 }

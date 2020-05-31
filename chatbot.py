@@ -15,8 +15,7 @@ with open("chat.json") as file:
     bot = json.load(file)
 
 try:
-    x
-    with open("data.pickle", "rb") as f:
+    with open("datax.pickle", "rb") as f:
         words, labels, train, output = pickle.load(f)
 
 except Exception as err:
