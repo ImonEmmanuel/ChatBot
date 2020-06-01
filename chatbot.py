@@ -92,6 +92,10 @@ except Exception as err:
     model = Sequential()
     model.add(Dense(128, input_shape=(len(train[0]),), activation='relu'))
     model.add(Dropout(0.5))
+    model.add(Dense(64, input_shape=(len(train[0]),), activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(32, input_shape=(len(train[0]),), activation='relu'))
+    model.add(Dropout(0.5))
     model.add(Dense(len(output[0]), activation='softmax'))
 
     # Compile model. Stochastic gradient descent with Nesterov accelerated gradient gives good results for this model
@@ -112,7 +116,7 @@ def bag_of_words(sentence, words):
     
     Output:
     It returns a numpy array to be used 
-    Note: The Numpy array was reshaped to an array of 63 because the length of our train[0] is 63
+    Note: The Numpy array was reshaped to an array of 79 because the length of our train[0] is 79
     If you make changes or edit the json file to suit your needs then the Length of your train will change
     Do well to play around the codes, make changes to suit your need and understand how it works
     """
@@ -126,7 +130,7 @@ def bag_of_words(sentence, words):
             if word == sentences:
                 bag[i] = 1
     
-    return np.array(bag).reshape(-1, 63)
+    return np.array(bag).reshape(-1, 79)
 
 def chat():
     """
@@ -141,7 +145,7 @@ def chat():
     Note: The Threshold was not selected Randomly, it was done after sereies of conversation with the bot to know,
     which threshold it starts giving out irrelevant responses if the responses is not in it database
     """
-    print("Start Talking with the Bot,To Stop type quit")
+    print("Start Talking with the Bot,To Stop type quit\n")
     while True:
         inp = input("You :   ")
         if inp.lower() == "quit":
@@ -152,16 +156,18 @@ def chat():
         results_index = np.argmax(results)
         tag = labels[results_index]
         
-        if results[results_index] >= 0.844:
+        #print(f"Model Prediction:   {results[results_index]}")
+
+        if results[results_index] >= 0.876:
 
             #Looping through the json file
 
             for tags in bot["intents"]:
                 if tags["tag"] == tag:
                     responses = tags["responses"]
-            print(np.random.choice(responses))
+            print(f"Chat Bot:   {np.random.choice(responses)}\n")
         
         else:
-            print("I dont quite Understand, Ask another question")
+            print("Chat Bot:   I dont quite Understand, Ask another question\n")
 
 chat()
